@@ -71,28 +71,17 @@
     height: 429px; 
 }
 
-#seconds,
-#tens {
-    font-size: 2em;
+#timer {
+    font-size: 100px;
+    margin: 0 auto;
+    width: 100%;
 }
 
-#button-start,
-#button-stop,
-#button-reset {
-    width: 150px;
-    height: 50px;
-    background: transparent;
-    color: white;
-    border-radius: 5px;
-    margin-right: 10px;
-    outline: none;
+#controls {
+    margin: 0 auto;
+    width: 500px;
 }
 
-#button-start:hover,
-#button-stop:hover,
-#button-reset:hover {
-    background: white;
-    color:#e7625f;
-    font-weight: 800;
-    text-transform: capitalize;
+#controls button {
+    font-size: 24px;
 }
