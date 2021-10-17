@@ -1,18 +1,43 @@
-workPeriod = 25
-restPeriod = 5
-seconds = 60
+const pomodoroTimer = document.querySelector('#pomodoro__timer');
 
-workMinutes = workPeriod - 1
-restMinutes = restPeriod - 1
+const startButton = document.querySelector('#pomo__start');
+const pauseButton = document.querySelector('#pomo__pause');
+const stopButton = document.querySelector('#pomo__stop');
 
-let RemainingTime = () =>{
-    seconds = seconds - 1
-    if(seconds === 0){
-        workMinutes = workMinutes - 1
-        if(workMinutes === -1){
-            workMinutes = breakMinutes
+//Start stuff
+startButton.addEventListener('click', () => {
+    toggleClock();
+})
+
+//Pause Button stuff
+pauseButton.addEventListener('click', () => {
+    toggleClock();
+})
+
+//Stop button stuff
+startButton.addEventListener('click', () => {
+    toggleClock(true);
+})
+
+let isClockRunning = false;
+
+// seconds = 25 mins
+let workSessionPeriod = 1500;
+let currentTimeLeftInPeriod = 1500;
+
+//in seconds = 5 mins
+let breakPeriodDuration = 300;
+
+const toggleClock = (reset) => {
+    if(reset) {
+        //Stopping the timer
+    } else {
+        if(isClockRunning == true) {
+            //Pausing the timer
+            isClockRunning = false;
+        } else {
+            //Starting the timer
+        } isClockRunning = true;
+    }
 }
-        seconds = 60
-}
-}
-let timer = setInterval(RemainingTime , 1000)
+ 
