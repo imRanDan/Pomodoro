@@ -18,26 +18,3 @@ pauseButton.addEventListener('click', () => {
 startButton.addEventListener('click', () => {
     toggleClock(true);
 })
-
-let isClockRunning = false;
-
-// seconds = 25 mins
-let workSessionPeriod = 1500;
-let currentTimeLeftInPeriod = 1500;
-
-//in seconds = 5 mins
-let breakPeriodDuration = 300;
-
-const toggleClock = (reset) => {
-    if(reset) {
-        //Stopping the timer
-    } else {
-        if(isClockRunning == true) {
-            //Pausing the timer
-            isClockRunning = false;
-        } else {
-            //Starting the timer
-        } isClockRunning = true;
-    }
-}
- 
